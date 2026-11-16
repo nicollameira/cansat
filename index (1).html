@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CanSat — A nossa missão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style (1).css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="c1" x="-50%" y="-100%" width="200%" height="300%"><feTurbulence type="fractalNoise" baseFrequency=".011" numOctaves="4" seed="3"/><feDisplacementMap in="SourceGraphic" scale="150"/></filter>
+  <filter id="c2" x="-50%" y="-100%" width="200%" height="300%"><feTurbulence type="fractalNoise" baseFrequency=".014" numOctaves="4" seed="8"/><feDisplacementMap in="SourceGraphic" scale="110"/></filter>
+  <filter id="c3" x="-50%" y="-100%" width="200%" height="300%"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="3" seed="14"/><feDisplacementMap in="SourceGraphic" scale="70"/></filter>
+  <filter id="ru" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="14"/></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="1.4"/></filter>
+  <linearGradient id="lgo" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2a6a2a"/><stop offset=".6" stop-color="#5e9e36"/><stop offset="1" stop-color="#9fcf5a"/></linearGradient>
+  <linearGradient id="lgm" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#4a8d2e"/><stop offset="1" stop-color="#bfe06e"/></linearGradient>
+  <linearGradient id="lgi" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#8ec04c"/><stop offset="1" stop-color="#eaf5a8"/></linearGradient>
+  <linearGradient id="cg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f8a5b"/><stop offset=".4" stop-color="#8fdcaa"/><stop offset="1" stop-color="#1f6b46"/></linearGradient>
+</defs></svg>
+
+<a class="brand" href="#inicio">CANSAT</a>
+
+<div class="stage" id="stage" aria-hidden="true">
+  <div class="sun"></div>
+  <div class="clouds"></div>
+  <div class="land">
+    <div class="hill h2"></div><div class="hill h1"></div>
+    <svg class="crowd" id="crowd" viewBox="0 0 1600 130" preserveAspectRatio="xMidYMax slice"></svg>
+    <div class="ground"></div>
+  </div>
+  <div class="soil"></div>
+  <svg class="lettuce" id="lettuce" viewBox="-20 0 340 250"></svg>
+
+  <!-- Uma única lata durante todo o site -->
+  <div class="can" id="can">
+    <div class="sway"><div class="can-in">
+      <svg class="chute" viewBox="0 0 300 220">
+        <path d="M10 120C14 40 80 6 150 6S286 40 290 120Q268 100 245 120Q222 100 200 120Q175 100 150 120Q125 100 100 120Q78 100 55 120Q32 100 10 120Z" fill="url(#cg)" stroke="#1f6b46" stroke-width="3"/>
+        <path d="M150 6C110 30 70 70 55 118M150 6C130 40 120 80 100 118M150 6V118M150 6C170 40 180 80 200 118M150 6C190 30 230 70 245 118" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5"/>
+        <path d="M10 120L150 220M55 120L150 220M100 120L150 220M150 120V220M200 120L150 220M245 120L150 220M290 120L150 220" stroke="#e8f3ec" stroke-width="1.1" opacity=".85"/>
+      </svg>
+      <div class="tube">
+        <div class="bay"><div class="b" data-n="1">Temp. + pressão</div><div class="b" data-n="2">Telemetria</div><div class="b" data-n="3">Missão secundária</div></div>
+        <div class="shell">C</div>
+      </div>
+      <div class="cap"></div><div class="base"></div>
+    </div></div>
+  </div>
+</div>
+<div class="hud" id="hud" aria-hidden="true">Altitude <span id="alt">1000</span> m</div>
+
+<main>
+  <section class="sec hero" id="inicio">
+    <div class="panel">
+      <h1>Pequeno no tamanho. Gigante na missão.</h1>
+      <p>Acompanha o nosso CanSat numa queda desde o céu até à descoberta.</p>
+      <a class="cue" href="#missao">Desce com ele ↓</a>
+    </div>
+  </section>
+
+  <section class="sec" id="missao">
+    <div class="panel">
+      <h2>Missão primária</h2>
+      <p>Durante a queda, a lata abre-se e mostra o que leva em cada compartimento.</p>
+      <details open data-bay="1 2"><summary>Objetivo da missão</summary><p>Texto de exemplo: apresenta aqui o objetivo principal da missão, o que pretendem medir e como vão analisar os resultados.</p></details>
+      <details data-bay="1"><summary>Sensor de temperatura e pressão</summary><p>Texto de exemplo: explica que sensor utilizam, que grandezas mede e como os dados são recolhidos.</p></details>
+      <details data-bay="2"><summary>Transmissão de dados</summary><p>Texto de exemplo: descreve a telemetria, a frequência de transmissão e a informação recebida na estação terrestre.</p></details>
+    </div>
+  </section>
+
+  <section class="sec" id="paraquedas">
+    <div class="panel">
+      <h2>Paraquedas ativado</h2>
+      <p>O sistema de recuperação abre e abranda a descida.</p>
+      <details open><summary>Estrutura do paraquedas</summary><p>Texto de exemplo: materiais, forma e dimensões escolhidas para o paraquedas.</p></details>
+      <details><summary>Funcionamento e abertura</summary><p>Texto de exemplo: como o paraquedas é libertado e como abranda a descida do CanSat.</p></details>
+      <details><summary>Testes e segurança</summary><p>Texto de exemplo: testes realizados e decisões tomadas para garantir uma aterragem controlada.</p></details>
+    </div>
+  </section>
+
+  <section class="sec" id="secundaria">
+    <div class="panel">
+      <h2>Missão secundária</h2>
+      <p>Uma experiência extra, guardada no último compartimento.</p>
+      <details open data-bay="3"><summary>Objetivo da missão</summary><p>Texto de exemplo: a pergunta científica que querem explorar e a importância desta experiência.</p></details>
+      <details data-bay="3"><summary>Sensores e componentes</summary><p>Texto de exemplo: que sensores usam, o que detetam e como estão integrados no CanSat.</p></details>
+      <details data-bay="3"><summary>Análise dos resultados</summary><p>Texto de exemplo: como vão tratar os dados e que conclusões esperam retirar.</p></details>
+    </div>
+  </section>
+
+  <section class="sec land" id="aterragem">
+    <div class="panel">
+      <h2>Houston, temos alface.</h2>
+      <p>A lata despedaça-se no chão e, lá de dentro, nasce uma alface impecável.</p>
+    </div>
+  </section>
+</main>
+<footer>CanSat — uma pequena lata, uma grande experiência.</footer>
+
+<script>
+const $=s=>document.querySelector(s), NS='http://www.w3.org/2000/svg';
+const stage=$('#stage'), can=$('#can'), land=$('.land'), cloudsEl=$('.clouds'), landSec=$('#aterragem');
+const secs=['inicio','missao','paraquedas','secundaria','aterragem'].map(id=>document.getElementById(id));
+const lerp=(a,b,t)=>a+(b-a)*t, clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const rgb=h=>h.match(/\w\w/g).map(x=>parseInt(x,16));
+const mix=(a,b,t)=>'rgb('+rgb(a).map((v,i)=>Math.round(lerp(v,rgb(b)[i],t))).join()+')';
+const top=['2563b0','5aa2dc','8ccbee'], bot=['9cc9ee','cbe6f6','e8f4ec'];
+const sky=(arr,p)=>{const t=p*2,i=Math.min(1,Math.floor(t));return mix(arr[i],arr[i+1],t-i)};
+
+/* Nuvens em 3 camadas com velocidades diferentes (paralaxe) */
+const clouds=[];
+[[5,.3,.6,2,.6,'c3'],[4,.7,1,1,.85,'c2'],[3,1.4,1.7,2.5,.95,'c1']].forEach(([n,k,sc,b,o,f],L)=>{
+  for(let i=0;i<n;i++){
+    const e=document.createElement('div');e.className='cloud';
+    e.style.cssText=`filter:url(#${f}) blur(${b}px);opacity:${o}`;cloudsEl.append(e);
+    clouds.push({e,k,sc,L,i,x:(i+.35+L*.18)/n,y:(i*397+L*211)%1400});
+  }
+});
+
+/* Alface realista: folhas com nervuras, gradientes e bordas onduladas */
+(function(){
+  const leaf='M0 0C-52-30-70-105-30-148C-14-166 14-166 30-148C70-105 52-30 0 0Z';
+  const veins='M0-4V-140M0-30L-26-62M0-30L26-62M0-62L-31-97M0-62L31-97M0-92L-20-122M0-92L20-122';
+  let h='<ellipse cx="150" cy="238" rx="120" ry="12" fill="rgba(20,40,10,.35)"/><g filter="url(#ru)">';
+  [[8,.85,-80,80,'o'],[7,.72,-66,66,'m'],[5,.5,-42,42,'i']].forEach(([n,s,a0,a1,r])=>{
+    for(let i=0;i<n;i++){
+      const a=lerp(a0,a1,i/(n-1))+((i*37)%9-4), sc=s*(.9+((i*53)%10)/50);
+      h+=`<g transform="translate(150 236) rotate(${a}) scale(${sc})"><path d="${leaf}" fill="url(#lg${r})" stroke="rgba(30,70,20,.4)" stroke-width="1.5"/><path d="${veins}" fill="none" stroke="rgba(255,255,225,.5)" stroke-width="2.4" stroke-linecap="round"/></g>`;
+    }
+  });
+  $('#lettuce').innerHTML=h+'</g>';
+})();
+
+/* Público ao fundo */
+(function(){
+  let h='<g fill="#2c544c" filter="url(#soft)">';
+  for(let i=0;i<22;i++){
+    const x=40+i*72+((i*41)%30), s=.8+((i*29)%10)/30, up=i%3===0;
+    h+=`<g transform="translate(${x} 130) scale(${s})"><circle cx="0" cy="-92" r="15"/><path d="M-30 0C-30-58-18-72 0-72S30-58 30 0Z"/>${up?'<path d="M-22-50L-40-100M22-50L40-100" stroke="#2c544c" stroke-width="9" stroke-linecap="round" fill="none"/>':''}</g>`;
+  }
+  $('#crowd').innerHTML=h+'</g>';
+})();
+
+/* Acordeões: só uma aberta por painel */
+document.querySelectorAll('.panel').forEach(p=>{
+  const ds=[...p.querySelectorAll('details')];
+  ds.forEach(d=>d.addEventListener('toggle',()=>{if(d.open)ds.forEach(o=>{if(o!==d)o.open=false})}));
+});
+
+/* Scroll → movimento do cenário */
+let queued=false;
+function update(){
+  queued=false;
+  const H=innerHeight, W=innerWidth, sy=scrollY, mob=W<760;
+  const g=clamp((H-landSec.getBoundingClientRect().top)/(H*.9));
+  const pd=clamp(sy/Math.max(1,landSec.offsetTop-H*.1));
+  let s=0; secs.forEach((e,i)=>{if(e.getBoundingClientRect().top<H*.55)s=i});
+  const crash=g>.93;
+
+  stage.style.setProperty('--sky1',sky(top,pd));
+  stage.style.setProperty('--sky2',sky(bot,pd));
+  stage.classList.toggle('crash',crash);
+  can.classList.toggle('open',(s===1||s===3)&&!crash);
+  can.classList.toggle('has-chute',s>=2);
+  land.style.transform=`translateY(${(1-g)*100}%)`;
+  cloudsEl.style.opacity=1-clamp((g-.4)/.5)*.65;
+
+  const bx=mob?W/2:W*.72, by=mob?H*.3:H*.5, ly=H*.78-83;
+  const amp=crash?0:s===0?11:s===2?4:2.5;
+  const rot=Math.sin(sy/170)*amp*(1-g);
+  can.style.transform=`translate3d(${lerp(bx,W/2,g)}px,${lerp(by,ly,g)}px,0) rotate(${rot}deg)`;
+
+  const Hc=H+500;
+  clouds.forEach(c=>{
+    const y=(((c.y-sy*c.k)%Hc)+Hc)%Hc-250, x=c.x*W-200+Math.sin(sy/500+c.i+c.L)*40;
+    c.e.style.transform=`translate3d(${x}px,${y}px,0) scale(${c.sc})`;
+  });
+
+  const d=secs[s].querySelector('details[open]'), ids=(d&&d.dataset.bay||'').split(' ');
+  document.querySelectorAll('.b').forEach(b=>b.classList.toggle('on',ids.includes(b.dataset.n)));
+  $('#alt').textContent=Math.round(1000*(1-Math.max(pd,g)));
+}
+const req=()=>{if(!queued){queued=true;requestAnimationFrame(update)}};
+addEventListener('scroll',req,{passive:true});addEventListener('resize',req);
+document.addEventListener('toggle',req,true);
+update();
+</script>
+</body>
+</html>
